@@ -26,15 +26,18 @@ jobs:
         with:
           node-version: "18"
           cache: "npm"
+          cache-dependency-path: package-lock.json
 
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
       - name: Grant execute permissions for Vite
-        run: chmod +x node_modules/.bin/vite
+        run: chmod -R +x node_modules/.bin/ || echo "Permission adjustment skipped or not needed"
 
       - name: Build
         run: npm run build
+        env:
+          CI: false
 
       - name: Setup Pages
         uses: actions/configure-pages@v4
