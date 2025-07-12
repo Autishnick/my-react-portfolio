@@ -1,0 +1,324 @@
+/* Імпорт шрифтів */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+.about {
+  padding: 100px 2rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.about::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 15% 30%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 85% 70%, rgba(118, 75, 162, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.about-title {
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 2;
+}
+
+.about-title h1 {
+  font-family: 'Inter', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin: 0;
+  position: relative;
+  display: inline-block;
+}
+
+.about-title h1::before {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(135deg, #ff6b6b 0%, #ffd93d 100%);
+  border-radius: 2px;
+}
+
+.about-title h1::after {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 4px;
+  background: linear-gradient(135deg, #4e65c8 0%, #764ba2 100%);
+  border-radius: 2px;
+}
+
+.about-sections {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.about-left:first-child {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.about-left:first-child::before {
+  content: '';
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  right: -20px;
+  bottom: -20px;
+  background: linear-gradient(135deg, #ff6b6b 0%, #ffd93d 50%, #4e65c8 100%);
+  border-radius: 20px;
+  z-index: -1;
+  opacity: 0.1;
+}
+
+.about-left img {
+  width: 350px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.15),
+    0 0 0 10px rgba(255, 255, 255, 0.8);
+  transition: all 0.4s ease;
+  position: relative;
+}
+
+.about-left img:hover {
+  transform: translateY(-10px) rotate(2deg);
+  box-shadow: 
+    0 30px 60px rgba(0, 0, 0, 0.2),
+    0 0 0 15px rgba(255, 255, 255, 0.9);
+}
+
+.about-left:last-child {
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.1),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.about-left:last-child::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #ff6b6b 0%, #ffd93d 50%, #4e65c8 100%);
+}
+
+.about-para {
+  margin-bottom: 2.5rem;
+}
+
+.about-para p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #4a5568;
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.about-para p::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.7rem;
+  width: 6px;
+  height: 6px;
+  background: linear-gradient(135deg, #ff6b6b 0%, #ffd93d 100%);
+  border-radius: 50%;
+}
+
+.about-para p:last-child {
+  margin-bottom: 0;
+}
+
+.about-skills {
+  position: relative;
+}
+
+.about-skills::before {
+  content: 'My Skills';
+  position: absolute;
+  top: -2.5rem;
+  left: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #2d3748;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.about-skills .about-skills {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.about-skills-p {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: white;
+  background: linear-gradient(135deg, #4e65c8 0%, #764ba2 100%);
+  padding: 0.8rem 1.2rem;
+  border-radius: 25px;
+  text-align: center;
+  margin: 0;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.about-skills-p::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s ease;
+}
+
+.about-skills-p:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(78, 101, 200, 0.4);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.about-skills-p:hover::before {
+  left: 100%;
+}
+
+.about-skills-p:nth-child(1) {
+  background: linear-gradient(135deg, #ff6b6b 0%, #ff8a80 100%);
+}
+
+.about-skills-p:nth-child(1):hover {
+  background: linear-gradient(135deg, #ff5252 0%, #ff7043 100%);
+  box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4);
+}
+
+.about-skills-p:nth-child(2) {
+  background: linear-gradient(135deg, #ffd93d 0%, #ffb74d 100%);
+}
+
+.about-skills-p:nth-child(2):hover {
+  background: linear-gradient(135deg, #ffcc02 0%, #ffa726 100%);
+  box-shadow: 0 8px 20px rgba(255, 217, 61, 0.4);
+}
+
+.about-skills-p:nth-child(3) {
+  background: linear-gradient(135deg, #42a5f5 0%, #1e88e5 100%);
+}
+
+.about-skills-p:nth-child(3):hover {
+  background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%);
+  box-shadow: 0 8px 20px rgba(66, 165, 245, 0.4);
+}
+
+.about-skills-p:nth-child(4) {
+  background: linear-gradient(135deg, #ab47bc 0%, #8e24aa 100%);
+}
+
+.about-skills-p:nth-child(4):hover {
+  background: linear-gradient(135deg, #9c27b0 0%, #7b1fa2 100%);
+  box-shadow: 0 8px 20px rgba(171, 71, 188, 0.4);
+}
+
+/* Адаптивність */
+@media (max-width: 1024px) {
+  .about-sections {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+  
+  .about-left img {
+    width: 300px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 60px 1.5rem;
+  }
+  
+  .about-title h1 {
+    font-size: 2.5rem;
+  }
+  
+  .about-left img {
+    width: 250px;
+    height: 300px;
+  }
+  
+  .about-left:last-child {
+    padding: 1.5rem;
+  }
+  
+  .about-skills .about-skills {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+  
+  .about-para p {
+    font-size: 1rem;
+    padding-left: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-title h1 {
+    font-size: 2rem;
+  }
+  
+  .about-left img {
+    width: 200px;
+    height: 250px;
+  }
+  
+  .about-sections {
+    gap: 2rem;
+  }
+  
+  .about-left:last-child {
+    padding: 1rem;
+  }
+}
